@@ -38,6 +38,9 @@ To create a more robust strategy, a new, non-correlated alpha factor was enginee
 ![Feature Importance](images/feature%20importance%20of%20xgboost%20model.png)
 *Figure: Feature importance from the XGBoost model.*
 
+![Ensemble Feature Importance](images/feature_importance.png)
+*Figure: Feature importance from the Ensemble model.*
+
 ## Final Results & Analysis
 
 The definitive test was a direct comparison of the advanced Ensemble Model against the original Sentiment-Only baseline on the out-of-sample 2024 data. The Ensemble Model demonstrated a clear and dramatic improvement in performance.
