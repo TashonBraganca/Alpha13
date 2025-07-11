@@ -1,0 +1,11 @@
+pandas
+numpy
+yfinance
+transformers
+torch
+xgboost
+vectorbt
+pandas-datareader
+scikit-learn
+statsmodels
+plotly
