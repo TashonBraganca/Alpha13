@@ -35,20 +35,23 @@ To create a more robust strategy, a new, non-correlated alpha factor was enginee
 *   **New Signal (Implied Volatility):** A daily signal was created based on the Implied Volatility (IV) of near-term, at-the-money options contracts. As a proxy for market fear and uncertainty, IV provides a valuable, forward-looking counterpoint to the sentiment signal.
 *   **Ensemble Modeling:** The XGBoost model was retrained on a richer feature set that included both sentiment and IV signals. A feature importance analysis confirmed the value of this approach, identifying `implied_volatility` as one of the most significant new predictors. This demonstrated the pipeline's ability to combine diverse data types into a single, cohesive model.
 
+![Feature Importance](images/feature%20importance%20of%20xgboost%20model.png)
+*Figure: Feature importance from the XGBoost model.*
+
 ## Final Results & Analysis
 
 The definitive test was a direct comparison of the advanced Ensemble Model against the original Sentiment-Only baseline on the out-of-sample 2024 data. The Ensemble Model demonstrated a clear and dramatic improvement in performance.
 
 ### Performance Overview
 
-![Figure 1: Cumulative returns of the Ensemble Model vs. a Buy & Hold Benchmark during the out-of-sample test period.](images/ensemble_performance_plot.png)
+![Figure 1: Cumulative returns of the Ensemble Model vs. a Buy & Hold Benchmark during the out-of-sample test period.](images/ensemble%20stratergy%20vs%20benchmark.png)
 *Figure 1: Cumulative returns of the Ensemble Model vs. a Buy & Hold Benchmark during the out-of-sample test period.*
 
 ### Risk & Drawdown Analysis
 
 A critical component of strategy evaluation is understanding its risk profile. The "underwater plot" below visualizes the drawdown periods for the Ensemble Model, showing the percentage decline from its previous peak equity. The strategy's maximum drawdown was -12.41%, and its 95% daily Value at Risk (VaR) was -1.11%.
 
-![Figure 2: The "Underwater Plot" showing the drawdown periods for the Ensemble Model.](images/ensemble_drawdown_plot.png)
+![Figure 2: The "Underwater Plot" showing the drawdown periods for the Ensemble Model.](images/ensemble%20dropdown.png)
 *Figure 2: The "Underwater Plot" showing the drawdown periods for the Ensemble Model.*
 
 ### The Final Verdict: A Head-to-Head Model Comparison
@@ -59,14 +62,14 @@ The following visualizations and table provide a definitive, quantitative compar
 
 This chart compares the key performance metrics of both models side-by-side. It clearly illustrates the significant improvements across return and risk-adjusted metrics achieved by the Ensemble Model.
 
-![Figure 3: A head-to-head comparison of key performance metrics.](images/final%20performacnce%20metric%20.png)
+![Figure 3: A head-to-head comparison of key performance metrics.](images/ensemble%20performance%20plot.png)
 *Figure 3: A head-to-head comparison of key performance metrics.*
 
 #### Signal Quality Over Time (Line Graph)
 
 This graph plots the rolling 60-day Information Coefficient (IC) for both models. A higher and more stable line indicates a more intelligent and reliable predictive signal.
 
-![Figure 4: A comparison of the rolling 60-day Information Coefficient.](images/line%20performcane%20metrix.png)
+![Figure 4: A comparison of the rolling 60-day Information Coefficient.](images/line%20graph.png)
 *Figure 4: A comparison of the rolling 60-day Information Coefficient.*
 
 ### Quantitative Verdict (Table)
